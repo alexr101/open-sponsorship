@@ -1,3 +1,13 @@
 nav {
-    border-bottom: 2px solid grey;
+    background-color: #FFF;
+    border-bottom: 3px solid rgb(161, 144, 199);
+    margin-bottom: 25px;
+    font-family: Lato, sans-serif;
+    letter-spacing: 1px;
 }
+
+nav .navbar-brand {
+    color:  black;
+    font-size: 1.5rem;
+}
+

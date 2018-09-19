@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const expressValidator = require('express-validator');
 const dotenv = require('dotenv');
 const path = require('path');
+const appDir = path.dirname(require.main.filename);
 
 
 exports.init = (app) => {
@@ -18,5 +19,6 @@ exports.init = (app) => {
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: true }));
     app.use(expressValidator());
-    app.use(express.static(path.join(__dirname, 'public'), { maxAge: 31557600000 }));
+    app.use(express.static(appDir + '/public'));
+
 }
