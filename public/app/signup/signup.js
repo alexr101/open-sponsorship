@@ -1,6 +1,8 @@
 'use strict';
 
 const SignupCtrl = function ($scope, $state, $http) {
+	$scope.pageTitle = 'Signup';
+
 	$scope.form = {
 		description: '',
 		location: '',

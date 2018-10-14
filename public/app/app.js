@@ -12,10 +12,11 @@ angular.module('myApp', [
 config(['$locationProvider', '$stateProvider', '$urlRouterProvider', function ($locationProvider, $stateProvider, $urlRouterProvider) {
 
 	$locationProvider.hashPrefix('!');
+	$urlRouterProvider.when('/','/users');
+
 	$urlRouterProvider.when('/signup','/signup/basicInfo');
 
 	$stateProvider
-
 	.state('users', {
 		url: '/users',
 		templateUrl: 'users/users.html',
@@ -50,6 +51,7 @@ config(['$locationProvider', '$stateProvider', '$urlRouterProvider', function ($
 
 }])
 .controller('AppCtrl', ['$scope', '$state', function ($scope, $state) {
+	$scope.pageTitle = 'Open Sponsorship';
 	$scope.appName = 'OPEN  SPONSORSHIP';
 }]);
 

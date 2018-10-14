@@ -1,6 +1,8 @@
 'use strict';
 
 const UsersCtrl = function ($scope, $state, $http) {
+	$scope.pageTitle = 'Users';
+
   $scope.users = [];
 	$scope.getUsers = () => {
 		$http({
