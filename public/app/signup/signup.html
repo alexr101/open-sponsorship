@@ -1,0 +1,15 @@
+<div ng-controller="SignupCtrl">
+  <div class="signup">
+    <h1>Signup</h1>
+    <div class="tabs">
+      <div class="inline-block" ng-repeat="tab in tabs">
+        <div class="tab" ng-click="goToTab(tabsFriendlyNames[$index])">
+          <a href="#!/signup/{{tabsFriendlyNames[$index]}}">{{tab}}</a>
+        </div>
+      </div>
+    </div>
+    <div class="form">
+        <div ui-view></div>
+    </div>
+  </div>
+</div>

@@ -1,18 +1,21 @@
 const mongoose = require('mongoose');
+const localMongo = process.env.MONGODB_URI;
+const mongoLab = 'mongodb://' + process.env.MONGOLAB_USER + ':' + process.env.MONGOLAB_PASS + process.env.MONGOLAB_URI;
 
 exports.init = (app) => {
-    // Connect to MongoDB.
-    console.log('hiiii');
-    
-    console.log(process.env.MONGODB_URI);
-    
+
+
     mongoose.Promise = global.Promise;
-    mongoose.connect(process.env.MONGODB_URI || process.env.MONGOLAB_URI);
+    mongoose.connect(mongoLab, _onConnect);
     mongoose.connection.on('error', _errHandler);
 }
 
+const _onConnect = () =>{
+    console.log('connected to ' + mongoLab);
+}
+
 const _errHandler = (err) => {
-    console.error(err);
+    if(err) console.log(err);
     process.exit();
 }
 

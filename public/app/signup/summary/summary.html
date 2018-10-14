@@ -1,0 +1,48 @@
+<p>Please review your information below before submitting.</p>
+<div class="form-group">
+    <strong>Name</strong>
+    <p>{{form.name || 'N/A'}}</p>
+</div>
+<div class="form-group">
+    <strong>Sport</strong>
+    <p>{{form.sport || 'N/A'}}</p>
+</div>
+<div class="form-group">
+    <strong>Nationality</strong>
+    <p>{{form.nationality || 'N/A'}}</p>
+</div>
+<div class="form-group">
+    <strong>Gender</strong>
+    <p>{{form.gender || 'N/A'}}</p>
+</div>
+<div class="form-group">
+    <strong>Date of birth</strong>
+    <p>{{form.dob || 'N/A'}}</p>
+</div>
+<div class="form-group">
+    <strong>Description</strong>
+    <p>{{form.description || 'N/A'}}</p>
+</div>
+<div class="form-group">
+    <strong>Location</strong>
+    <p>{{form.location || 'N/A'}}</p>
+</div>
+<div class="form-group">
+    <strong>Team</strong>
+    <p>{{form.team || 'N/A'}}</p>
+</div>
+<div class="form-group">
+    <strong>Facebook</strong>
+    <p>{{form.facebook || 'N/A'}}</p>
+</div>
+<div class="form-group">
+    <strong>Instagram</strong>
+    <p>{{form.instagram || 'N/A'}}</p>
+</div>
+<div class="form-group">
+    <strong>Twitter</strong>
+    <p>{{form.twitter || 'N/A'}}</p>
+</div>
+
+<button class="btn btn-secondary" ng-click="goToTab('basicInfo')">Go back</button>
+<button class="btn btn-primary" ng-click="submitSignUp()">Submit</button>

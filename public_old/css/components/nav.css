@@ -1,0 +1,13 @@
+nav {
+    background-color: #FFF;
+    border-bottom: 3px solid rgb(193, 122, 122);
+    margin-bottom: 25px;
+    /* font-family: Lato, sans-serif; */
+    letter-spacing: 1px;
+}
+
+nav .navbar-brand {
+    color:  black;
+    font-size: 1.7rem;
+}
+

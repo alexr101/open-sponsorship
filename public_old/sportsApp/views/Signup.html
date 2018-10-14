@@ -1,0 +1,49 @@
+<h1>{{header}}</h1>
+<div ng-switch="step">
+    <div ng-switch-when="1">
+        1
+        <label for="name">Name</label>
+        <input id="name" type="text">
+        <label for="date-of-birth">DOB</label>
+        <input id="date-of-birth" type="text">
+        <label for="nationality">Nationality</label>
+        <input id="nationality" type="text">
+        <label for="Location">Location</label>
+        <input id="Location" type="text">
+        <label for="Association">Association</label>
+        <input id="Association" type="text">
+        <label for="Team">Team</label>
+        <input id="Team" type="text">
+
+        <button ng-click="next()">Next</button>
+    </div>
+    <div ng-switch-when="2">
+        2
+        <button ng-click="back()">Back</button>
+        <button ng-click="next()">Next</button>
+
+    </div>
+    <div ng-switch-when="3">
+        3
+        <button ng-click="back()">Back</button>
+        <button ng-click="next()">Submit</button>
+
+    </div>
+</div>
+
+Name
+Date of Birth
+Nationality
+Location
+Association (e.g. NBA, NFL)
+Team (e.g. New York Giants)
+Gender
+Sports (Can Multiple)
+About
+Interests
+Charities
+Social Media Handles (Facebook, Twitter, Instagram, Youtube, Twitch, Snapchat)
+Pets
+Drinks Alcohol
+Married
+Profile Image (If you have time - S3 storage)

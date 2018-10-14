@@ -19,6 +19,6 @@ exports.init = (app) => {
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: true }));
     app.use(expressValidator());
-    app.use(express.static(appDir + '/public'));
+    app.use(express.static(appDir + '/public/app'));
 
 }

@@ -1,8 +1,8 @@
 // Core routing component to init all mo
 
 exports.init = (app) => {
-    var UserRoutes = require('../users')
-    UserRoutes.init(app);
+    var UserApiRoutes = require('../api/usersApi')
+    UserApiRoutes.init(app);
 
     var HomeRoute = require('../home')
     HomeRoute.init(app);
