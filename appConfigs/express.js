@@ -8,6 +8,7 @@ const appDir = path.dirname(require.main.filename);
 
 exports.init = (app) => {
     dotenv.config();
+    app.use(express.static(appDir + '/public/app'));
     
     process.on('unhandledRejection', (reason, p) => {
         console.log('Unhandled Rejection at: Promise', p, 'reason:', reason);
@@ -19,6 +20,5 @@ exports.init = (app) => {
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: true }));
     app.use(expressValidator());
-    app.use(express.static(appDir + '/public/app'));
 
 }
